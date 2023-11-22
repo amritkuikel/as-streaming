@@ -23,7 +23,7 @@ export default function HorizontalList({ movies }) {
       });
   }, [movies]);
   return (
-    <div className=" flex gap-5 overflow-x-scroll ">
+    <div className=" flex gap-5 pb-5 " >
       {state.map((s) => (
         <HorizontalCard
           key={s.title}
