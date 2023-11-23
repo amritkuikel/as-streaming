@@ -16,7 +16,7 @@ export default function HorizontalList() {
       });
   }, []);
   return (
-    <div className=' flex gap-5 overflow-x-scroll '>
+    <div className=' flex md:gap-5 gap-1 overflow-x-scroll '>
           {state.map((s) => (
         <HorizontalCard
           key={s.title}

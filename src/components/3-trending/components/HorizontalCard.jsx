@@ -6,11 +6,11 @@ import Link from "next/link";
 export default function HorizontalCard({ value='0', name, date, img }) {
   const imageUrl = `https://image.tmdb.org/t/p/original${img}`;
   return (
-    <div className="flex min-w-[152px] flex-col gap-7">
+    <div className="flex md:min-w-[152px] min-w-[100px] flex-col md:gap-7 gap-5">
       <div className="relative">
-        <Link href='/movie'>
+        <Link href={`/movie/${name}`}>
           <img
-            className="h-[200px] w-80 rounded-xl object-cover"
+            className="h-40 w-32 md:h-[200px] md:w-80 rounded-xl object-cover"
             src={imageUrl}
             height={0}
             width={0}
@@ -23,7 +23,7 @@ export default function HorizontalCard({ value='0', name, date, img }) {
       </div>
       <div className="">
         <Link href='/movie'>
-          <h2 className="font-bold hover:text-teal-600 cursor-pointer">
+          <h2 className="md:font-bold font-semibold hover:text-teal-600 cursor-pointer">
             {name}
           </h2>
         </Link>

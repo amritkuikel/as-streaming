@@ -33,7 +33,7 @@ export default function HorizontalList({movie}) {
   }, [movie]);
 
   return (
-    <div className='flex gap-5 overflow-x-scroll scrollbar'>
+    <div className='flex md:gap-5 gap-1 overflow-x-scroll scrollbar md:h-[50vh] h-[30vh]   overflow-y-hidden '>
       {movies.map(moviess => (
         <HorizontalCard 
           key={moviess.id} 

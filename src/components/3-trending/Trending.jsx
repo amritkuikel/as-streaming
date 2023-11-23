@@ -8,14 +8,14 @@ export default function Trending() {
     setMovies(!movies)
   }
   return (
-    <div className=" mt-5 md:mt-10 md:px-20 px-10 flex flex-col items-start gap-5 mx-[5vw] overflow-x-scroll overflow-y-hidden h-[55vh]"  style={{backgroundImage:`url('/assets/bg/bg5.jpg')`}} >
+    <div className=" mt-5 md:mt-10   flex flex-col items-start gap-5 mx-[5vw]"  style={{backgroundImage:`url('/assets/bg/bg5.jpg')`}} >
 
       <div className="flex justify-center items-center gap-5" >
-        <h2 className=" cursor-pointer font-semibold text-2xl">Trending</h2>
+        <h2 className=" cursor-pointer font-semibold text-lg md:text:2xl">Trending</h2>
         <Toggle first={'Movies'} second={'Series'} clickHandler={clickHandler}/>
       </div>
 
-      <div className="w-full ">
+      <div className="w-full md:px-10 md:h-[50vh] h-[35vh] overflow-x-scroll overflow-y-hidden">
         <HorizontalList  movies={movies}/>
       </div>
 

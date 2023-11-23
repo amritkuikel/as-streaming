@@ -5,9 +5,9 @@ import {FaPlay} from 'react-icons/fa'
 
 export default function HorizontalCard({img, title, subtitle}) {
   return (
-    <div className='flex min-w-[350px] flex-col gap-5 items-center justify-center'>
+    <div className='flex md:min-w-[350px] min-w-[200px]  flex-col gap-5 items-center justify-center'>
         <div className='relative' >
-            <img className='relative h-[200px] rounded-xl w-auto' src={img} height={0} width={0}/>
+            <img className='relative md:h-[200px] h-[100px] rounded-xl w-auto' src={img} height={0} width={0}/>
             <div><FaPlay className='text-white absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]' size={40}/> </div>
         </div>
         <div className='text-center'>

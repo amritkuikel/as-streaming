@@ -35,10 +35,10 @@ export default function Home () {
             <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-tr from-blue-800 to-blue-900 opacity-70 z-[1]" ></div>
             <h1 className="cursor-pointer text-3xl md:text-5xl font-bold text-white z-[2]">Welcome</h1>
             <h2 className="cursor-pointer text-xl md:text-3xl font-bold mt-4 md:mt-2 text-white z-[2]">
-            Millions of movies, TV shows and people to discover. Explore now.
+            Millions of movies and people to discover. Explore now.
             </h2>
             <div className="bg-gray-200  rounded-3xl flex mt-10 w-full z-[2]">
-                <input className="bg-transparent px-5 text-black outline-none w-full " type="text" placeholder="Search for a movie, tv show, person"/>
+                <input className="bg-transparent px-5 text-black outline-none w-full " type="text" placeholder="Search for a movie, person"/>
                 <button className="hover:scale-[1.02] rounded-3xl border py-2 px-5  bg-gradient-to-tr from-cyan-500 to-blue-900  font-semibold text-white">Search</button>
             </div>
         </div>

@@ -18,7 +18,7 @@ export default function Toggle({first, second,clickHandler}) {
   return (
     <div className="flex rounded-3xl  border-2 border-blue-400">
         <button
-        className={` rounded-3xl px-7 py-1 transition ${
+        className={` rounded-3xl md:px-7 px-4 py-1 transition ${
           activeButton === first ? "bg-blue-500 text-white" : "bg-white"
         }`}
         onClick={() => handleButtonClick(first)}
@@ -26,7 +26,7 @@ export default function Toggle({first, second,clickHandler}) {
         {first}
       </button>
       <button
-        className={` rounded-3xl  px-7 py-1 transition ${
+        className={` rounded-3xl  md:px-7 px-4 py-1 transition ${
           activeButton === second ? "bg-blue-500 text-white" : "bg-white"
         }`}
         onClick={() => handleButtonClick(second)}

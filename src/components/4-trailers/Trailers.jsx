@@ -40,14 +40,14 @@ export default function Trailers() {
 
   return (
     <div 
-      className="bg-cover md:bg-cover bg-no-repeat bg-top relative px-10 py-10 md:py-0 md:min-h-[50vh] z-[0]" 
+      className="bg-cover md:bg-cover bg-no-repeat bg-top relative md:px-10 px-5 py-10 md:py-0 md:min-h-[50vh] z-[0]" 
       style={{backgroundImage: `url(${heroImage})`,
     }}>
       <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-tr from-blue-900 to-blue-900 opacity-70 z-[-1]" ></div>
-      <div className="md:py-10  mt-5 md:mt-10 md:px-40 px-10 flex flex-col items-start gap-5 z-[1]">
+      <div className="md:py-10  mt-5 md:mt-10 md:px-40  flex flex-col items-start gap-5 z-[1]">
         <div className="flex justify-center items-center gap-5">
-          <h2 className="font-semibold text-2xl text-white">Latest Trailers</h2>
-          <Toggle first={'Popular'} second={'In Theaters'}  clickHandler={clickHandler}/>
+          <h2 className="md:font-semibold md:text-2xl text-white">Trailers</h2>
+          <Toggle first={'Popular'} second={'Theater'}  clickHandler={clickHandler}/>
         </div>
         <div className="w-full  overflow-hidden text-white">
           <HorizontalList movie={movie}/>
