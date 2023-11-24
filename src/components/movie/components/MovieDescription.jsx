@@ -1,30 +1,39 @@
-import React,{useState} from "react";
+import React, { useEffect, useState } from "react";
 import { FaPlay } from "react-icons/fa";
+import Link from "next/link";
+import axios from "axios";
 
-export default function MovieDescription({state}) {
+export default function MovieDescription({ state }) {
+  const [hash1, setHash1] = useState('');
   const title = state.original_title;
   const image = state.backdrop_path;
   const image2 = state.poster_path;
   const releaseDate = state.release_date;
   const runtime = state.runtime;
   const rating = state.vote_average;
-  const rated = state.adult?"Adult":"PG";
-  const overview =state.overview;
-
+  const rated = state.adult ? "Adult" : "PG";
+  const overview = state.overview;
+  const imdb = state.imdb_id;
   return (
     <div
       className={` bg-cover md:bg-cover bg-no-repeat bg-top relative bg-gray-800 text-white p-10 md:h-screen flex justify-center items-center`}
-      style={{ backgroundImage: `url(https://image.tmdb.org/t/p/original${image})` }}
+      style={{
+        backgroundImage: `url(https://image.tmdb.org/t/p/original${image})`,
+      }}
     >
       <div className="z-[1] md:mx-10 gap-10 flex justify-center items-center">
         <div className=" min-h-[400px] min-w-[300px] hidden md:flex justify-center items-center bg-gray-400">
-          <img className=" max-w-[300px]" src={`https://image.tmdb.org/t/p/original${image2}`} alt="img" />
+          <img
+            className=" max-w-[300px]"
+            src={`https://image.tmdb.org/t/p/original${image2}`}
+            alt="img"
+          />
         </div>
 
         <div className="">
           <div className="flex flex-col">
             <h1 className="font-bold text-5xl md:text-4xl">
-              {title}{" "}
+              <Link href={`/player/${imdb}`}>{title} </Link>
               <span className="font-normal text-4xl">({releaseDate})</span>{" "}
             </h1>
             <div className="mt-10 md:mt-2 flex gap-5 font-semibold items-center">

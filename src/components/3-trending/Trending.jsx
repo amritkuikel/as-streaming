@@ -12,7 +12,7 @@ export default function Trending() {
 
       <div className="flex justify-center items-center gap-5" >
         <h2 className=" cursor-pointer font-semibold text-lg md:text:2xl">Trends</h2>
-        <Toggle first={'Popular'} second={'Top Rated'} clickHandler={clickHandler}/>
+        <Toggle first={'Popular'} second={'Rated'} clickHandler={clickHandler}/>
       </div>
 
       <div className="w-full md:px-10 md:h-[50vh] h-[35vh] overflow-x-scroll overflow-y-hidden">

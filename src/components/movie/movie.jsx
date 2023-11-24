@@ -1,7 +1,6 @@
 'use client'
 import React from "react";
 import MovieDescription from "./components/MovieDescription";
-import MoviePlayer from "./components/MoviePlayer";
 import { useEffect, useState } from "react";
 import axios from "axios";
 export default function Movie({ id }) {
@@ -16,7 +15,6 @@ export default function Movie({ id }) {
   return (
     <div>
       <div className="flex flex-col md:flex-col-reverse">
-        <div><MoviePlayer /></div>
         <div>
           <MovieDescription state={state}/>
         </div>
