@@ -9,27 +9,28 @@ export default function HorizontalList({ movies }) {
   useEffect(() => {
     let a;
     if (movies) {
-      a = 'movie';
-    }
-    else{
-      a= 'tv'
+      a = "popular";
+    } else {
+      a = "top_rated";
     }
     axios
       .get(
-        "https://api.themoviedb.org/3/discover/"+encodeURIComponent(a)+"?api_key=92f1a9b8bd84a589617f01fea605e96e&sort_by=popularity.desc&page=1"
+        "https://api.themoviedb.org/3/movie/"+encodeURIComponent(a)+"?language=en-US&page=1&api_key=92f1a9b8bd84a589617f01fea605e96e"
       )
       .then((Response) => {
         setState(Response.data.results);
       });
+    
   }, [movies]);
   return (
-    <div className=" flex md:gap-5 gap-2 pb-5 " >
+    <div className=" flex md:gap-5 gap-2 pb-5 ">
       {state.map((s) => (
         <HorizontalCard
+          id={s.id}
           key={s.title}
           value={s.vote_average}
-          name={movies?s.title:s.name}
-          date={movies?s.release_date:s.first_air_date}
+          name={ s.title }
+          date={ s.release_date }
           img={s.backdrop_path}
         />
       ))}

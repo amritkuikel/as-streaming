@@ -47,7 +47,7 @@ export default function Trailers() {
       <div className="md:py-10  mt-5 md:mt-10 md:px-40  flex flex-col items-start gap-5 z-[1]">
         <div className="flex justify-center items-center gap-5">
           <h2 className="md:font-semibold md:text-2xl text-white">Trailers</h2>
-          <Toggle first={'Popular'} second={'Theater'}  clickHandler={clickHandler}/>
+          <Toggle first={'Now Playing'} second={'Hits'}  clickHandler={clickHandler}/>
         </div>
         <div className="w-full  overflow-hidden text-white">
           <HorizontalList movie={movie}/>

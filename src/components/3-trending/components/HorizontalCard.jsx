@@ -3,12 +3,12 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-export default function HorizontalCard({ value='0', name, date, img }) {
+export default function HorizontalCard({ value='0', name, date, img,id }) {
   const imageUrl = `https://image.tmdb.org/t/p/original${img}`;
   return (
     <div className="flex md:min-w-[152px] min-w-[100px] flex-col md:gap-7 gap-5">
       <div className="relative">
-        <Link href={`/movie/${name}`}>
+        <Link href={`/movie/${id}`}>
           <img
             className="h-40 w-32 md:h-[200px] md:w-80 rounded-xl object-cover"
             src={imageUrl}

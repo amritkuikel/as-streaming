@@ -9,7 +9,7 @@ export default function HorizontalList() {
   useEffect(() => {
     axios
       .get(
-        "https://api.themoviedb.org/3/discover/movie?api_key=92f1a9b8bd84a589617f01fea605e96e&sort_by=popularity.desc&page=1"
+        "https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1&api_key=92f1a9b8bd84a589617f01fea605e96e"
       )
       .then((Response) => {
         setState(Response.data.results);
